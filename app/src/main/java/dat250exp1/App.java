@@ -53,6 +53,11 @@ public class App {
                 .start(9000);
     }
 
+    /**
+     *
+     * @param ctx - Provides access to functions for handling the request and response
+     * @return result of unit conversion
+     */
     public static double UnitConversion(Context ctx) {
         double value = Double.parseDouble(ctx.formParam("value"));
         String fromUnit = ctx.formParam("sunit");
