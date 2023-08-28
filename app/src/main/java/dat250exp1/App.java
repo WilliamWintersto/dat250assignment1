@@ -1,6 +1,7 @@
 package dat250exp1;
 
 import io.javalin.Javalin;
+import io.javalin.http.Context;
 
 public class App {
 
@@ -47,36 +48,40 @@ public class App {
                     ctx.html(WEBPAGE);
                 })
                 .post("/convert", ctx -> {
-                    double value = Double.parseDouble(ctx.formParam("value"));
-                    String fromUnit = ctx.formParam("sunit");
-                    String toUnit = ctx.formParam("tunit");
-                    double inMeters;
-                    if (fromUnit.equals("in")) {
-                        inMeters = value * IN_TO_METER;
-                    } else if (fromUnit.equals("ft")) {
-                        inMeters = value * FT_TO_METER;
-                    } else if (fromUnit.equals("mi")) {
-                        inMeters = value * MI_TO_METER;
-                    } else if (fromUnit.equals("m")) {
-                        inMeters = value;
-                    } else {
-                        inMeters = Double.NaN;
-                    }
-                    double result;
-                    if (toUnit.equals("in")) {
-                        result = inMeters / IN_TO_METER;
-                    } else if (toUnit.equals("ft")) {
-                        result = inMeters / FT_TO_METER;
-                    } else if (toUnit.equals("mi")) {
-                        result = inMeters / MI_TO_METER;
-                    } else if (toUnit.equals("m")) {
-                        result = inMeters;
-                    } else {
-                        result = Double.NaN;
-                    }
-                    ctx.result(Double.toString(result));
+                    ctx.result(Double.toString(UnitConversion(ctx)));
                 })
                 .start(9000);
+    }
+
+    public static double UnitConversion(Context ctx) {
+        double value = Double.parseDouble(ctx.formParam("value"));
+        String fromUnit = ctx.formParam("sunit");
+        String toUnit = ctx.formParam("tunit");
+        double inMeters;
+        if (fromUnit.equals("in")) {
+            inMeters = value * IN_TO_METER;
+        } else if (fromUnit.equals("ft")) {
+            inMeters = value * FT_TO_METER;
+        } else if (fromUnit.equals("mi")) {
+            inMeters = value * MI_TO_METER;
+        } else if (fromUnit.equals("m")) {
+            inMeters = value;
+        } else {
+            inMeters = Double.NaN;
+        }
+        double result;
+        if (toUnit.equals("in")) {
+            result = inMeters / IN_TO_METER;
+        } else if (toUnit.equals("ft")) {
+            result = inMeters / FT_TO_METER;
+        } else if (toUnit.equals("mi")) {
+            result = inMeters / MI_TO_METER;
+        } else if (toUnit.equals("m")) {
+            result = inMeters;
+        } else {
+            result = Double.NaN;
+        }
+        return result;
     }
 
 
