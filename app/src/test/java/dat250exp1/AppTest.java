@@ -5,10 +5,27 @@ package dat250exp1;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import java.text.DecimalFormat;
 
 class AppTest {
-    @Test void appHasAGreeting() {
+    private static final DecimalFormat df = new DecimalFormat("0.00000");
+    @Test void conversionWorks() {
         App classUnderTest = new App();
-        assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
+
+        assertEquals("8.33333", df.format(classUnderTest.UnitConversion("in", 100, "ft")));
+        assertEquals("0.00158", df.format(classUnderTest.UnitConversion("in", 100, "mi")));
+        assertEquals("2.54000", df.format(classUnderTest.UnitConversion("in", 100, "m")));
+
+        assertEquals("1200.00000", df.format(classUnderTest.UnitConversion("ft", 100, "in")));
+        assertEquals("0.01894", df.format(classUnderTest.UnitConversion("ft", 100, "mi")));
+        assertEquals("30.48000", df.format(classUnderTest.UnitConversion("ft", 100, "m")));
+
+        assertEquals("6336000.00000", df.format(classUnderTest.UnitConversion("mi", 100, "in")));
+        assertEquals("528000.00000", df.format(classUnderTest.UnitConversion("mi", 100, "ft")));
+        assertEquals("160934.40000", df.format(classUnderTest.UnitConversion("mi", 100, "m")));
+
+        assertEquals("3937.00787", df.format(classUnderTest.UnitConversion("m", 100, "in")));
+        assertEquals("328.08399", df.format(classUnderTest.UnitConversion("m", 100, "ft")));
+        assertEquals("0.06214", df.format(classUnderTest.UnitConversion("m", 100, "mi")));
     }
 }

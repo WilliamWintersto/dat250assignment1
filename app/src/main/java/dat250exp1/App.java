@@ -48,20 +48,21 @@ public class App {
                     ctx.html(WEBPAGE);
                 })
                 .post("/convert", ctx -> {
-                    ctx.result(Double.toString(UnitConversion(ctx)));
+                    double value = Double.parseDouble(ctx.formParam("value"));
+                    String fromUnit = ctx.formParam("sunit");
+                    String toUnit = ctx.formParam("tunit");
+                    ctx.result(Double.toString(UnitConversion(fromUnit, value, toUnit)));
                 })
                 .start(9000);
     }
 
     /**
-     *
-     * @param ctx - Provides access to functions for handling the request and response
+     * @param fromUnit
+     * @param value
+     * @param toUnit
      * @return result of unit conversion
      */
-    public static double UnitConversion(Context ctx) {
-        double value = Double.parseDouble(ctx.formParam("value"));
-        String fromUnit = ctx.formParam("sunit");
-        String toUnit = ctx.formParam("tunit");
+    public static double UnitConversion(String fromUnit, double value, String toUnit) {
         double inMeters;
         if (fromUnit.equals("in")) {
             inMeters = value * IN_TO_METER;
