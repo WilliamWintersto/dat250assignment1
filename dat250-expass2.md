@@ -1,59 +1,25 @@
 # Lab2 report
 
-### Problems:
+### Problems
 There were no particular technical problems installing and using JPA.
 
-### Link to code:
+### Link to code
 https://github.com/WilliamWintersto/dat250-jpa-tutorial
 
-### Questions:
+### Questions
 
 Where is the database? Explain the used database and how/when it runs.
-- blablabla
+- The database is in the top package "dat250-jpa-tutorial" with the name "DB.mv.db.". The database is configured in the persistence.xml file.
+On line 10 we can see that the driver class is H2, which is a relational database management system. It is an embedded database that is initialized trough the entity manager.
+The database is created on line 17 in CreditCardsMain.java. "entitymanager.gettransaction().begin()" initiates a new database transaction.
 
 Can you provide the SQl used to create the table Customer (Hint: Hibernate is used for the object-relational-mapping)?
 Answer: blablabla
 
-Find a way to inspect the database tables being created and attach a screenshot of the database schema to your report. Do the created tables correspond to your initial thoughts regarding the exercise?
+Find a way to inspect the database tables being created and attach a screenshot of the database schema to your report. Do the created tables correspond to your initial thoughts regarding the exercise? (an explanation of how you inspected the database tables and what tables were created. For the latter, you may provide screenshots.)
 Answer: aaaaaaa
         aaaaaaa
 
-
-
-
-
-
-
-
-
-
-I ran into a problem pushing the image to dockerhub
-because I was using docker instead of podman. It
-turned out I had to tag the image before pushing it.
-
+### Pending issues
 As far as I know everything should be working now.
 If not I must have misunderstood something.
-
-
-
-My docker image:
-https://hub.docker.com/layers/williamwintersto/dat250/latest/images/sha256-116625caceeda313283500f0f6c784606b2de5cb6b85212aaa111dc4f17b0922?context=explore
-
-
-
-
-Questions:
-
-Where is the database? Explain the used database and how/when it runs.
-Can you provide the SQl used to create the table Customer (Hint: Hibernate is used for the object-relational-mapping)?
-Find a way to inspect the database tables being created and attach a screenshot of the database schema to your report. Do the created tables correspond to your initial thoughts regarding the exercise?
-
-In particular, you should write about:
-
-* technical problems that you encountered during installation and use of Java Persistence Architecture (JPA) and how you resolved
-
-* a link to your code for experiment 2 above. Make sure the included test case passes!
-
-* an explanation of how you inspected the database tables and what tables were created. For the latter, you may provide screenshots.
-
-* any pending issues with this assignment that you did not manage to solve
