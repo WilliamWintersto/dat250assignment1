@@ -3,7 +3,7 @@ There were no particular technical problems installing and using JPA.
 
 Link to code: https://github.com/WilliamWintersto/dat250-jpa-tutorial
 
-Questions:
+## Questions:
 
 Where is the database? Explain the used database and how/when it runs.
 - blablabla
