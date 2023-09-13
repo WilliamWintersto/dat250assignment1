@@ -1,7 +1,7 @@
 # Lab2 report
 
 ### Problems
-There were no particular technical problems installing and using JPA.
+One problem i had was when adding the h2 driver for the database it was not very clear that i had to manually switch from the default h2 driver to h2-2.2.220.jar.
 
 ### Link to code
 https://github.com/WilliamWintersto/dat250-jpa-tutorial
@@ -23,4 +23,3 @@ That were created. Right clicking on the database and selecting "show diagram" o
 
 ### Pending issues
 As far as I know everything should be working now.
-If not I must have misunderstood something.
