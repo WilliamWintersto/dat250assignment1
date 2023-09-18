@@ -29,7 +29,11 @@ See all documents, then delete everything and try to display all documents.
 ![](image-7.png)
 
 ### bulk-write-operations
+Before writing, then inserting, updating, deleting and replacing documents, then after writing.
 
+![](image-8.png)
+![](image-9.png)
+![](image-10.png)
 
 ## Experiment 2
 
