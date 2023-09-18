@@ -23,6 +23,10 @@ Paper item before change, update the value of the size.uom field to "cm" and the
 ![](image-5.png)
 
 ### remove-documents
+See all documents, then delete everything and try to display all documents.
+
+![](image-6.png)
+![](image-7.png)
 
 ### bulk-write-operations
 
