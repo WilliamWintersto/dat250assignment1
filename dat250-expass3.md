@@ -1,28 +1,28 @@
 # Lab3 report
 
 
-### Problems
+## Problems
 One problem i had was when trying to validate the installation package was that the given scipt had a different version number. This caused an error when trying to validate, but was easily fixed my changing the version number in all locations.
 
 
-### Experiment 1
+## Experiment 1
 Some of the script outputs were way longer than others so I ended up choosing the shorter ones.
-#### insert-documents
+### insert-documents
 ![](image-3.png)
 
-#### query-documents
+### query-documents
 ![](image-4.png)
 
-#### update-documents
+### update-documents
 ![](image-5.png)
 
-#### remove-documents
+### remove-documents
 
-#### bulk-write-operations
-
-
-### Experiment 2
+### bulk-write-operations
 
 
-### Pending issues
+## Experiment 2
+
+
+## Pending issues
 As far as I know everything should be working.
