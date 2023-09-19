@@ -37,6 +37,3 @@ Before writing, then inserting, updating, deleting and replacing documents, then
 
 ## Experiment 2
 
-
-## Pending issues
-As far as I know everything should be working.
