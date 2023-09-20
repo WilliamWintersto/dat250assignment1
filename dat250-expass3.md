@@ -36,4 +36,8 @@ Before writing, then inserting, updating, deleting and replacing documents, then
 ![](image-10.png)
 
 ## Experiment 2
+Let's say we have a database that stores every item in a stores inventory. The owner wants to restock so that he has at least 100 of every item. The mapReduce function I have developed is useful in this situation because it will return the amount of money it will cost to restock all items with a quantity of less than 100, up to 100 again. In this situation the owner has to buy 75 journals costing 200 each and 50 notebooks costing 100 each. The mapReduce function tells us that it will cost 20000 which is correct (75 * 200 + 50 * 100 = 20000).
 
+![](image-11.png)
+![](image-12.png)
+![](image-13.png)
