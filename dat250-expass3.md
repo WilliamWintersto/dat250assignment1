@@ -5,6 +5,8 @@
 - When trying to validate the installation package was that the given scipt had a different version number. This caused an error when trying to validate, but was easily fixed my changing the version number in all locations.
 - When trying to run the mapReduce function it would not work in the mongoCompass terminal. I had to run mongosh in cmd to solve the problem.
 
+## Validation of installation package
+![](image-14.png)
 
 ## Experiment 1
 Some of the script outputs were way longer than others so I ended up choosing the shorter ones.
